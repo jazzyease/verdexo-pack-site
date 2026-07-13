@@ -1,29 +1,41 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown, ArrowRight } from "@phosphor-icons/react";
+import { ArrowDown, ArrowRight, CheckCircle } from "@phosphor-icons/react";
 
 type HeroProps = { onStartProject: () => void };
 
 export function Hero({ onStartProject }: HeroProps) {
   return (
     <section className="hero" id="top">
-      <div className="hero-copy">
-        <p className="eyebrow">Design · Packaging · Production</p>
-        <h1>Your product is ready. <em>Does the packaging look ready?</em></h1>
-        <p className="hero-description">We turn promising products into shelf-ready brands through packaging strategy, design and production.</p>
-        <div className="hero-actions">
-          <a className="button button-dark" href="#work">Explore designs <ArrowDown /></a>
-          <button className="button button-outline" onClick={onStartProject}>Start a project <ArrowRight /></button>
+      <div className="hero-shell">
+        <div className="hero-copy">
+          <p className="eyebrow">Packaging for ambitious food brands</p>
+          <h1>Make your product look <span>ready for market.</span></h1>
+          <p className="hero-description">From brand identity and print-ready artwork to finished packaging—we help tea, snacks, rice, atta and FMCG products earn attention and trust.</p>
+          <div className="hero-actions">
+            <button className="button button-dark" onClick={onStartProject}>Get a packaging quote <ArrowRight /></button>
+            <a className="button button-light" href="#work">Explore our work <ArrowDown /></a>
+          </div>
+          <div className="hero-checks">
+            <span><CheckCircle weight="fill" /> Custom design</span>
+            <span><CheckCircle weight="fill" /> Print support</span>
+            <span><CheckCircle weight="fill" /> Low to bulk quantities</span>
+          </div>
+        </div>
+        <div className="hero-products" aria-label="Featured Verdexo packaging designs">
+          <span className="hero-kicker">Designed by Verdexo</span>
+          <Image className="hero-pack hero-tea" src="/images/tea.png" alt="Misty Leaf premium Assam tea packaging" width={500} height={880} priority unoptimized />
+          <Image className="hero-pack hero-chips" src="/images/chips.png" alt="Crisp Rush potato chips packaging" width={470} height={790} priority unoptimized />
+          <Image className="hero-pack hero-rice" src="/images/rice.png" alt="Grain Crown basmati rice packaging" width={500} height={850} priority unoptimized />
+          <div className="hero-float"><strong>4 categories</strong><span>One launch-ready system</span></div>
         </div>
       </div>
-      <div className="hero-products" aria-label="Featured Verdexo packaging designs">
-        <div className="measure measure-top"><span>Seal area</span></div>
-        <div className="measure measure-side"><span>Retail-ready structures</span></div>
-        <Image className="hero-pack hero-tea" src="/images/tea.png" alt="Misty Leaf premium Assam tea packaging" width={500} height={880} priority unoptimized />
-        <Image className="hero-pack hero-chips" src="/images/chips.png" alt="Crisp Rush potato chips packaging" width={470} height={790} priority unoptimized />
-        <Image className="hero-pack hero-rice" src="/images/rice.png" alt="Grain Crown basmati rice packaging" width={500} height={850} priority unoptimized />
-        <p className="hero-note">Designed to be noticed.<br />Built to be produced.</p>
+      <div className="trust-strip">
+        <span><strong>Since 2017</strong>Verdexo Ventures</span>
+        <span><strong>20+ years</strong>Packaging experience</span>
+        <span><strong>Design to print</strong>One accountable partner</span>
+        <span><strong>Across India</strong>Production support</span>
       </div>
     </section>
   );

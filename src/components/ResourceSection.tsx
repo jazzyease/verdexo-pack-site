@@ -13,7 +13,7 @@ type ResourceSectionProps = { onStartProject: () => void };
 export function ResourceSection({ onStartProject }: ResourceSectionProps) {
   return (
     <section className="resource-section" id="resources">
-      <div className="resource-copy"><p className="eyebrow">Resources for ambitious brands</p><h2>Start with better information.</h2><p>Selected practical resources are available to help you prepare the right brief and avoid expensive production mistakes.</p><button onClick={onStartProject}>Need a custom dieline? <ArrowRight /></button></div>
+      <div className="resource-copy"><p className="eyebrow">Free packaging resources</p><h2>Plan the project before you spend on print.</h2><p>Download practical guides, prepare a stronger brief and avoid common artwork and production mistakes.</p><button onClick={onStartProject}>Need a custom dieline? <ArrowRight /></button></div>
       <div className="resource-list">
         {resources.map(([title, meta]) => (
           <button className="resource-row" key={title} onClick={() => window.alert("Demo download — this resource will be connected in the production site.")}>

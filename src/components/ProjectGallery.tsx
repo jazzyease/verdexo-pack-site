@@ -11,9 +11,9 @@ export function ProjectGallery() {
 
   return (
     <section className="work-section" id="work">
-      <div className="section-heading">
-        <div><p className="eyebrow">Selected packaging work</p><h2>Designed for real categories.</h2></div>
-        <p>Browse category-specific identities, finished packs and production-ready thinking.</p>
+      <div className="section-heading center-heading">
+        <div><p className="eyebrow">Packaging categories</p><h2>Explore designs made for the shelf.</h2></div>
+        <p>See how category cues, structure and a clear brand identity come together in finished packs.</p>
       </div>
       <div className="category-filter" role="tablist" aria-label="Filter packaging projects">
         {categories.map((category) => (
@@ -24,12 +24,11 @@ export function ProjectGallery() {
         {filtered.map((project, index) => (
           <article className="project-card" key={project.id}>
             <div className={`project-visual tone-${index % 4}`}>
-              <span className="project-index">0{projects.indexOf(project) + 1}</span>
               <Image src={project.image} alt={`${project.title} packaging`} width={520} height={760} unoptimized />
-              {project.downloadable && <span className="download-tag"><DownloadSimple /> Sample available</span>}
+              {project.downloadable && <span className="download-tag"><DownloadSimple /> Sample dieline</span>}
             </div>
             <div className="project-info">
-              <div><p>{project.category} · {project.format}</p><h3>{project.title}</h3></div>
+              <div><p>{project.category} packaging</p><h3>{project.title}</h3><small>{project.format}</small></div>
               <button aria-label={`View ${project.title} project`}><ArrowRight /></button>
             </div>
             <p className="project-description">{project.description}</p>
