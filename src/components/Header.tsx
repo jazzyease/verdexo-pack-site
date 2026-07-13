@@ -13,7 +13,7 @@ export function Header({ onStartProject }: HeaderProps) {
   return (
     <header className="site-header">
       <a className="brand" href="#top" aria-label="Verdexo Packaging Studio home">
-        <Image src="/images/verdexo-logo.png" alt="Verdexo Ventures" width={150} height={62} priority />
+        <Image src="/images/verdexo-logo.png" alt="Verdexo Ventures" width={150} height={62} priority unoptimized />
         <span>Packaging Studio</span>
       </a>
       <nav className={open ? "primary-nav is-open" : "primary-nav"} aria-label="Primary navigation">

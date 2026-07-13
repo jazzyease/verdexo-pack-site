@@ -25,7 +25,7 @@ export function ProjectGallery() {
           <article className="project-card" key={project.id}>
             <div className={`project-visual tone-${index % 4}`}>
               <span className="project-index">0{projects.indexOf(project) + 1}</span>
-              <Image src={project.image} alt={`${project.title} packaging`} width={520} height={760} />
+              <Image src={project.image} alt={`${project.title} packaging`} width={520} height={760} unoptimized />
               {project.downloadable && <span className="download-tag"><DownloadSimple /> Sample available</span>}
             </div>
             <div className="project-info">

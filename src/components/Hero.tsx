@@ -20,9 +20,9 @@ export function Hero({ onStartProject }: HeroProps) {
       <div className="hero-products" aria-label="Featured Verdexo packaging designs">
         <div className="measure measure-top"><span>Seal area</span></div>
         <div className="measure measure-side"><span>Retail-ready structures</span></div>
-        <Image className="hero-pack hero-tea" src="/images/tea.png" alt="Misty Leaf premium Assam tea packaging" width={500} height={880} priority />
-        <Image className="hero-pack hero-chips" src="/images/chips.png" alt="Crisp Rush potato chips packaging" width={470} height={790} priority />
-        <Image className="hero-pack hero-rice" src="/images/rice.png" alt="Grain Crown basmati rice packaging" width={500} height={850} priority />
+        <Image className="hero-pack hero-tea" src="/images/tea.png" alt="Misty Leaf premium Assam tea packaging" width={500} height={880} priority unoptimized />
+        <Image className="hero-pack hero-chips" src="/images/chips.png" alt="Crisp Rush potato chips packaging" width={470} height={790} priority unoptimized />
+        <Image className="hero-pack hero-rice" src="/images/rice.png" alt="Grain Crown basmati rice packaging" width={500} height={850} priority unoptimized />
         <p className="hero-note">Designed to be noticed.<br />Built to be produced.</p>
       </div>
     </section>
